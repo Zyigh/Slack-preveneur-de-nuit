@@ -1,4 +1,4 @@
-package main
+package config
 
 type Config struct {
 	Meteo MeteoConf `envPrefix:"API_METEO_CONCEPT_"`
