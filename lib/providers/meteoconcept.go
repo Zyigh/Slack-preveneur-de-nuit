@@ -5,10 +5,11 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"preveneurdenuit/lib/config"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/Zyigh/Slack-preveneur-de-nuit/lib/config"
 )
 
 const meteoConceptAPIURL = "https://api.meteo-concept.com/api/ephemeride/0"

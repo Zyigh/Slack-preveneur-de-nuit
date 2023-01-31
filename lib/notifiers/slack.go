@@ -6,7 +6,8 @@ import (
 	"io"
 	"log"
 	"net/http"
-	"preveneurdenuit/lib/config"
+
+	"github.com/Zyigh/Slack-preveneur-de-nuit/lib/config"
 )
 
 const slackMsgFormat = `{"text": "%s", "channel": "%s"}`

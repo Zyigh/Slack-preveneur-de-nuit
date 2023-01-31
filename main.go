@@ -1,12 +1,13 @@
 package main
 
 import (
-	"github.com/caarlos0/env/v7"
 	"log"
-	"preveneurdenuit/lib"
-	"preveneurdenuit/lib/config"
-	"preveneurdenuit/lib/notifiers"
-	"preveneurdenuit/lib/providers"
+
+	"github.com/Zyigh/Slack-preveneur-de-nuit/lib"
+	"github.com/Zyigh/Slack-preveneur-de-nuit/lib/config"
+	"github.com/Zyigh/Slack-preveneur-de-nuit/lib/notifiers"
+	"github.com/Zyigh/Slack-preveneur-de-nuit/lib/providers"
+	"github.com/caarlos0/env/v7"
 )
 
 func run() error {
@@ -15,8 +16,8 @@ func run() error {
 		return err
 	}
 
-	app := lib.NewApp(providers.NewMeteoConcept(conf.Meteo))
-	app = app.WithNotifier(notifiers.NewSlack(conf.Slack))
+	app := lib.NewApp(providers.NewMeteoConcept(conf.Meteo)).
+		WithNotifier(notifiers.NewSlack(conf.Slack))
 
 	return app.Start()
 }

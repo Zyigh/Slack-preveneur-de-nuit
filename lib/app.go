@@ -3,9 +3,10 @@ package lib
 import (
 	"fmt"
 	"log"
-	"preveneurdenuit/lib/notifiers"
-	"preveneurdenuit/lib/utils"
 	"time"
+
+	"github.com/Zyigh/Slack-preveneur-de-nuit/lib/notifiers"
+	"github.com/Zyigh/Slack-preveneur-de-nuit/lib/utils"
 )
 
 const warningMessage = "<!here> Ça va être tout noir !"

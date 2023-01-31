@@ -1,4 +1,4 @@
-module preveneurdenuit
+module github.com/Zyigh/Slack-preveneur-de-nuit
 
 go 1.19
 
