@@ -24,19 +24,19 @@ type App struct {
 	notifiers []Notifier
 }
 
-func NewApp(provider SunsetHourAndMinuter) *App {
-	return &App{
+func NewApp(provider SunsetHourAndMinuter) App {
+	return App{
 		provider: provider,
 	}
 }
 
-func (a *App) WithNotifier(notifiers ...Notifier) *App {
+func (a App) WithNotifier(notifiers ...Notifier) App {
 	a.notifiers = append(a.notifiers, notifiers...)
 
 	return a
 }
 
-func (a *App) Start() error {
+func (a App) Start() error {
 	if len(a.notifiers) == 0 {
 		a.notifiers = append(a.notifiers, notifiers.Default{})
 	}
